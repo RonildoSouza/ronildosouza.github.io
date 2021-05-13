@@ -13,13 +13,14 @@ body {
 h1 {
     text-align: center;
     font-size: xx-large;
+    margin-bottom: 15px;
 }
 
 p {
-    margin: 15px 0;
     text-align: justify;
 }
 
+/* Layout */
 div.container>section.content-flex {
     display: flex;
     flex-direction: column;
@@ -31,11 +32,10 @@ div.container>section.content-flex>div {
     margin: auto;
 }
 
-div.container>section.main {
+/* Contents */
+div.container>section.main,
+div.container>section.footer {
     background-color: black !important;
-}
-
-div.container>section.main>* {
     color: white;
 }
 
@@ -43,25 +43,74 @@ div.container>section.content-flex:nth-child(2n) {
     background-color: #E1E2E1;
 }
 
+/* Links */
 div.container>section.links {
     height: auto;
     position: fixed;
-    right: 0;
-    margin: 20px;
-    line-height: 30px;
 }
 
 div.container>section.links>a {
     text-decoration: none;
 }
 
+div.container>section.links>a>p {
+    display: none;
+}
+
 div.container>section.links>a>img {
-    width: 40px;
-    height: 40px;
     background-color: white;
     border-radius: 20%;
 }
 
-.footer {
-    text-align: center;
+/* for-phone-only */
+@media (max-width: 599px), (min-width: 600px) {
+    /* Links */
+    div.container>section.links {
+        justify-content: space-between;
+        flex-direction: row;
+        width: 90%;
+        background-color: black;
+        padding: 20px;
+    }
+
+    div.container>section.links>a {
+        color: white;
+        text-align: center;
+        font-size: small;
+    }
+    
+    div.container>section.links>a>p {
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    div.container>section.links>a>img {
+        width: 40px;
+        height: 40px;
+    }
 }
+
+/* for-tablet-portrait-up */
+/* @media (min-width: 600px) {} */
+
+/* for-tablet-landscape-up */
+/* @media (min-width: 900px) {} */
+
+/* for-desktop-up */
+@media (min-width: 900px), (min-width: 1200px), (min-width: 1800px) {
+    /* Links */
+    div.container>section.links {
+        margin: 20px;
+        line-height: 30px;
+        right: 0;
+    }
+
+    div.container>section.links>a>img {
+        width: 60px;
+        height: 60px;
+        border: solid black 1px;
+    }
+}
+
+/* for-big-desktop-up */
+/* @media (min-width: 1800px) {} */
