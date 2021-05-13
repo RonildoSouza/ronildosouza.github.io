@@ -63,7 +63,7 @@ div.container>section.links>a>img {
 }
 
 /* for-phone-only */
-@media (max-width: 599px), (min-width: 600px) {
+@media (max-width: 599px) {
     /* Links */
     div.container>section.links {
         justify-content: space-between;
@@ -97,7 +97,7 @@ div.container>section.links>a>img {
 /* @media (min-width: 900px) {} */
 
 /* for-desktop-up */
-@media (min-width: 900px), (min-width: 1200px), (min-width: 1800px) {
+@media (min-width: 600px), (min-width: 900px), (min-width: 1200px), (min-width: 1800px) {
     /* Links */
     div.container>section.links {
         margin: 20px;
